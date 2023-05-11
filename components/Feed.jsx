@@ -80,9 +80,8 @@ const Feed = () => {
       </form>
 
       <h1 className="orange_gradient text-2xl text-center w-full mt-8 font-bold">
-        {searchText.trim() === ''
-          ? 'Explore Prompts'
-          : `Showing prompts for "${searchText}"`}
+        {searchText.trim() === '' ? 'Explore Prompts' : 'Showing prompts for'}
+        {searchText && <span className="blue_gradient"> "{searchText}"</span>}
       </h1>
 
       {/* All Prompts */}
